@@ -107,13 +107,18 @@ CustomEmailNotification
 Criando nosso usuário para enviar o E-Mail
 ### Security Material
 ![Fluxo](imagens/Screenshot_5.png)
-<br><br>
-O fluxo é iniciado através de um endpoint HTTPS, permitindo que aplicações externas consultem o serviço de clima.
+
+<br>
+
+
+
 
 ### :two:  HTTPS Sender
 <br>
 ### Configurando o Endpoint
-![Fluxo](imagens/Screenshot_5.png)
+O fluxo é iniciado através de um endpoint HTTPS, permitindo que aplicações externas consultem o serviço de clima.
+
+![Fluxo](imagens/Screenshot_12.png)
 
 ```
 /clima
