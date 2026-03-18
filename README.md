@@ -327,8 +327,7 @@ Mail Body:
 <br>
 
 ### :seven: Postman
-### Configuração do Mail - Processing
-Vamos marcar Body Mime Type: Text/HTML
+### Configuração do Postman
 ![Fluxo](imagens/Screenshot_21.png)
 
 <br>
