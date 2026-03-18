@@ -114,6 +114,7 @@ Criando nosso usuário para enviar o E-Mail
 ![Fluxo](imagens/Screenshot_6.png)
 
 <br>
+
 ### Editando Credentials
 ![Fluxo](imagens/Screenshot_7.png)
 ```
@@ -131,45 +132,81 @@ https://myaccount.google.com/apppasswords
 SAP CPI
 ```
 <br>
+
 ### Armarzenar a senha
 ![Fluxo](imagens/Screenshot_9.png)
+
 <br>
+
 ### Adicionar a senha nas Credentials
 ![Fluxo](imagens/Screenshot_10.png)
-<br>
-
-
-
-
-
-
-
-
-
 
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
+### Editando nosso Iflow
+![Fluxo](imagens/Screenshot_11.png)
+
+<br>
 
 ### :two:  HTTPS Sender
+
 <br>
+
+### Adicionando o HTTPS
+![Fluxo](imagens/Screenshot_12.png)
+
+<br>
+
 ### Configurando o Endpoint
 O fluxo é iniciado através de um endpoint HTTPS, permitindo que aplicações externas consultem o serviço de clima.
 
-![Fluxo](imagens/Screenshot_12.png)
+![Fluxo](imagens/Screenshot_13.png)
 
 ```
 /clima
 ```
 <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
 
 ### :three: Content Modifier – Definição da cidade
 
