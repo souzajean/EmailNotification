@@ -82,7 +82,7 @@ O fluxo foi desenvolvido no SAP Cloud Integration (CPI) seguindo as etapas abaix
 ### Criando o Integration Flow
 ![Fluxo](imagens/Screenshot_2.png)
 ```
-IntegracaodeClima
+Address: /NotificationEmail
 ```
 <br>
 
