@@ -49,16 +49,6 @@ O e-mail segue boas práticas de compatibilidade:
 
 ---
 
-## 🚀 Possíveis melhorias
-
-- Retry automático com Data Store
-- Integração com Microsoft Teams / Slack
-- Inclusão de logs técnicos detalhados
-- Link direto para Message Monitoring
-- Tratamento avançado de exceções (Groovy Script)
-
----
-
 ## 📊 Benefícios
 
 - Redução do tempo de resposta a falhas
