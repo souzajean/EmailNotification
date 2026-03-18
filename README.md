@@ -170,7 +170,7 @@ Nesta etapa são definidas as configurações que vamos usar para o Pauload.
 
 ### Renomeando o Content Modifier
 Renomeamos o Content Modifier 
-![Fluxo](imagens/Screenshot_14.png)
+![Fluxo](imagens/Screenshot_15.png)
 ```
 Prepare Email Payload
 ```
