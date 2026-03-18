@@ -181,7 +181,7 @@ Prepare Email Payload
 
 Em Header adicionamos
 ```
-Exchange Property
+Message Header
 create   -   CPI_Tenant   -    Expression   -    ${header.CamelHttpUrl}          - java.lang.String
 ```
 <br>
