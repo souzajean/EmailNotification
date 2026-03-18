@@ -110,7 +110,48 @@ Criando nosso usuário para enviar o E-Mail
 
 <br>
 
+### Criando Credentials
+![Fluxo](imagens/Screenshot_6.png)
 
+<br>
+### Editando Credentials
+![Fluxo](imagens/Screenshot_7.png)
+```
+GmailUser
+```
+<br>
+
+### :two:  Configuração Google Gmail
+### Acessar ao Site
+```
+[SAP CPI
+](https://myaccount.google.com/apppasswords)
+```
+![Fluxo](imagens/Screenshot_7.png)
+```
+SAP CPI
+```
+<br>
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 ### :two:  HTTPS Sender
@@ -137,12 +178,12 @@ longitude = -46.62
 Essas coordenadas representam a cidade de São Paulo.
 
 ### Adicionando o Content Modifier
-![Fluxo](imagens/Screenshot_6.png)
+![Fluxo](imagens/Screenshot_13.png)
 
 <br>
 
 ### Configurando o Content Modifier - Property
-![Fluxo](imagens/Screenshot_7.png)
+![Fluxo](imagens/Screenshot_14.png)
 Renomeamos o Content Modifier 
 ```
 General
@@ -158,7 +199,7 @@ create   -   latitude   -    Constant   -    -23.68
 <br>
 
 ### Renomeamos o Receiver
-![Fluxo](imagens/Screenshot_8.png)
+![Fluxo](imagens/Screenshot_15.png)
 ```
 WeatherAPI
 ```
@@ -172,17 +213,17 @@ O CPI realiza uma chamada HTTP para a API Open-Meteo, buscando as condições cl
 O retorno é recebido no formato JSON.
 
 ### Adicionamos o Request Reply
-![Fluxo](imagens/Screenshot_9.png)
+![Fluxo](imagens/Screenshot_16.png)
 
 <br>
 
 ### Adicionamos o Adapter HTTP
-![Fluxo](imagens/Screenshot_10.png)
+![Fluxo](imagens/Screenshot_17.png)
 
 <br>
 
 ### Configuração do Request Reply
-![Fluxo](imagens/Screenshot_11.png)
+![Fluxo](imagens/Screenshot_18.png)
 ```
 Address: https://api.open-meteo.com/v1/forecast?latitude=${property.latitude}&longitude=${property.longitude}&current_weather=true
 Proxy Type: Internet
@@ -209,12 +250,12 @@ Exemplo simplificado do XML gerado:
 <br>
 
 ### Adicionando o JSON → XML Converter
-![Fluxo](imagens/Screenshot_12.png)
+![Fluxo](imagens/Screenshot_19.png)
 
 <br>
 
 ### Configurando o JSON → XML Converter
-![Fluxo](imagens/Screenshot_13.png)
+![Fluxo](imagens/Screenshot_20.png)
 Em Processing
 ```
 Add XML Root Element
