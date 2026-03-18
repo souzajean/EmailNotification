@@ -158,106 +158,86 @@ SAP CPI
 <br>
 
 ### Configurando o Endpoint
-O fluxo é iniciado através de um endpoint HTTPS, permitindo que aplicações externas consultem o serviço de clima.
+O fluxo é iniciado através de um endpoint HTTPS, permitindo que aplicações externas consultem o serviço.
 
 ![Fluxo](imagens/Screenshot_13.png)
 
 ```
-/clima
+/NotificationEmail
 ```
 <br>
 
+### :three: Content Modifier – Definição  Prepare Email Payload
+
+Nesta etapa são definidas as configurações que vamos usar para o Pauload.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-
-### :three: Content Modifier – Definição da cidade
-
-Nesta etapa são definidas as coordenadas geográficas da cidade consultada.
-
-Exemplo utilizado:
-
-latitude  = -23.68
-longitude = -46.62
-
-Essas coordenadas representam a cidade de São Paulo.
-
-### Adicionando o Content Modifier
-![Fluxo](imagens/Screenshot_13.png)
-
-<br>
-
-### Configurando o Content Modifier - Property
+### Renomeando o Content Modifier
 ![Fluxo](imagens/Screenshot_14.png)
 Renomeamos o Content Modifier 
 ```
-General
-Name: cidade
+Prepare Email Payload
 ```
+<br>
+
+### Donfigurando o Content Modifier - Property
+![Fluxo](imagens/Screenshot_15.png)
+
 Em Property adicionamos
 ```
 Exchange Property
-create   -   longitude   -   Constant   -   -46.62
-create   -   latitude   -    Constant   -    -23.68
+create   -   Iflow_Name   -    Expression   -    ${property.Iflow_Name}             - java.lang.String
+create   -   CPI_Tenant   -    Expression   -    ${header.CamelHttpHost}            - java.lang.String
+create   -   Date_Now     -    Expression   -    ${date:now:yyyy-MM-dd HH:mm:ss}    - java.lang.String
 ```
-
 <br>
 
-### Renomeamos o Receiver
-![Fluxo](imagens/Screenshot_15.png)
-```
-WeatherAPI
-```
+### :four: End – Receiver
 
-<br>
+Nesta etapa, vamos utilizar o adapter de Email para que possamos realizar as conexões e configurações no adapter, para recebermos o e-mail da forma que queremos.
 
-### :four: Request Reply – Consumo da API
+O retorno é recebido no formato HTML.
 
-O CPI realiza uma chamada HTTP para a API Open-Meteo, buscando as condições climáticas atuais.
-
-O retorno é recebido no formato JSON.
-
-### Adicionamos o Request Reply
+### Conectamos o Email GMail
 ![Fluxo](imagens/Screenshot_16.png)
 
 <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 
 ### Adicionamos o Adapter HTTP
 ![Fluxo](imagens/Screenshot_17.png)
