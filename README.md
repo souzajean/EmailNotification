@@ -124,13 +124,18 @@ GmailUser
 ### :two:  Configuração Google Gmail
 ### Acessar ao Site
 ```
-[SAP CPI
-](https://myaccount.google.com/apppasswords)
+https://myaccount.google.com/apppasswords
 ```
-![Fluxo](imagens/Screenshot_7.png)
+![Fluxo](imagens/Screenshot_8.png)
 ```
 SAP CPI
 ```
+<br>
+### Armarzenar a senha
+![Fluxo](imagens/Screenshot_9.png)
+<br>
+### Adicionar a senha nas Credentials
+![Fluxo](imagens/Screenshot_10.png)
 <br>
 
 
