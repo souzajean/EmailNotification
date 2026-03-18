@@ -179,7 +179,7 @@ Prepare Email Payload
 ### Configurando o Content Modifier - Header
 ![Fluxo](imagens/Screenshot_16.png)
 
-Em Property adicionamos
+Em Header adicionamos
 ```
 Exchange Property
 create   -   CPI_Tenant   -    Expression   -    ${header.CamelHttpUrl}          - java.lang.String
