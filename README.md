@@ -77,7 +77,7 @@ O e-mail segue boas práticas de compatibilidade:
 O fluxo foi desenvolvido no SAP Cloud Integration (CPI) seguindo as etapas abaixo.
 ### Criando nosso Iflow
 ![Fluxo](imagens/Screenshot_1.png)
-<br>
+<br><br>
 
 ### Criando o Integration Flow
 ![Fluxo](imagens/Screenshot_2.png)
@@ -94,16 +94,24 @@ Address: /NotificationEmail
 ### Criando o Integration Flow
 ![Fluxo](imagens/Screenshot_4.png)
 ```
-Weather-Condition-Integration
+CustomEmailNotification
 ```
+
 <br>
 :gear: Etapas da Integração
 
 <br>
 
-### :one:  HTTPS Sender
+### :one:  Manage Security
 
+Criando nosso usuário para enviar o E-Mail
+### Security Material
+![Fluxo](imagens/Screenshot_5.png)
+<br><br>
 O fluxo é iniciado através de um endpoint HTTPS, permitindo que aplicações externas consultem o serviço de clima.
+
+
+<br>
 ### Configurando o Endpoint
 ![Fluxo](imagens/Screenshot_5.png)
 
