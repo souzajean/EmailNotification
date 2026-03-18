@@ -343,7 +343,7 @@ A notificação enviada contém:
 
 ## 📦 Exemplo prático – iFlow para baixar
 
-📦 [Download do iFlow – Integracao-de-Clima](https://github.com/souzajean/Integracao-de-Clima/raw/main/Package/Weather-Condition-Integration.zip)
+📦 [Download do iFlow – EmailNotification](https://github.com/souzajean/EmailNotification/raw/main/Package/CustomEmailNotification.zip)
 
 
 
