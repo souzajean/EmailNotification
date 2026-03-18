@@ -222,7 +222,7 @@ Vamos marcar Body Mime Type: Text/HTML
 ![Fluxo](imagens/Screenshot_20.png)
 
 ```
-Subject: CPI Monitoramento - ${property.Iflow_Name} - ${property.Date_Now}
+Subject: CPI Monitoramento - ${header.Iflow_Name} - ${property.Date_Now}
 ```
 <br>
 
@@ -275,12 +275,12 @@ Mail Body:
               
               <tr style="background-color:#fafafa;">
                 <td width="40%"><b>CPI Tenant</b></td>
-                <td>${property.CPI_Tenant}</td>
+                <td>${header.CPI_Tenant}</td>
               </tr>
 
               <tr>
                 <td><b>Name Iflow</b></td>
-                <td>${property.Iflow_Name}</td>
+                <td>${header.Iflow_Name}</td>
               </tr>
 
               <tr style="background-color:#fafafa;">
