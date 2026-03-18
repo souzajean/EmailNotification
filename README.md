@@ -110,7 +110,7 @@ Criando nosso usuário para enviar o E-Mail
 <br><br>
 O fluxo é iniciado através de um endpoint HTTPS, permitindo que aplicações externas consultem o serviço de clima.
 
-
+### :two:  HTTPS Sender
 <br>
 ### Configurando o Endpoint
 ![Fluxo](imagens/Screenshot_5.png)
@@ -120,7 +120,7 @@ O fluxo é iniciado através de um endpoint HTTPS, permitindo que aplicações e
 ```
 <br>
 
-### :two: Content Modifier – Definição da cidade
+### :three: Content Modifier – Definição da cidade
 
 Nesta etapa são definidas as coordenadas geográficas da cidade consultada.
 
@@ -160,7 +160,7 @@ WeatherAPI
 
 <br>
 
-### :three: Request Reply – Consumo da API
+### :four: Request Reply – Consumo da API
 
 O CPI realiza uma chamada HTTP para a API Open-Meteo, buscando as condições climáticas atuais.
 
@@ -187,7 +187,7 @@ Authentication: None
 
 <br>
 
-### :four: JSON → XML Converter
+### :five: JSON → XML Converter
 
 Como o SAP CPI trabalha melhor com XML em expressões XPath, o JSON retornado pela API é convertido para XML.
 
@@ -218,7 +218,7 @@ Name: root
 
 <br>
 
-### :five: Router – Classificação Inteligente do Clima
+### :six: Router – Classificação Inteligente do Clima
 
 O Router analisa os dados recebidos e classifica o clima em diferentes cenários com base em:
 
@@ -251,7 +251,7 @@ QUENTE	≥ 25°C <br>
 
 <br>
 
-### :six:  Content Modifier – Status	Erro
+### :seven:  Content Modifier – Status	Erro
 
 
 Quando houver erro na temperatura, o mesmo vai retornar um XML
@@ -275,7 +275,7 @@ Body:
 
 <br>
 
-### :seven: Content Modifier
+### :eight: Content Modifier
 
 <br>
 
