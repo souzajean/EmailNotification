@@ -64,8 +64,8 @@ O e-mail segue boas práticas de compatibilidade:
 
 # :building_construction: Arquitetura do iFlow
 
-### :one:
-O fluxo foi desenvolvido no SAP Cloud Integration (CPI) seguindo as etapas abaixo.
+### :one: O fluxo foi desenvolvido no SAP Cloud Integration (CPI) seguindo as etapas abaixo.
+
 ### Criando nosso Iflow
 ![Fluxo](imagens/Screenshot_1.png)
 <br><br>
@@ -93,7 +93,7 @@ CustomEmailNotification
 
 <br>
 
-### :one:  Manage Security
+### :two:  Manage Security
 
 Criando nosso usuário para enviar o E-Mail
 ### Security Material
@@ -113,7 +113,7 @@ GmailUser
 ```
 <br>
 
-### :two:  Configuração Google Gmail
+### :three:  Configuração Google Gmail
 ### Acessar ao Site
 ```
 https://myaccount.google.com/apppasswords
@@ -139,7 +139,7 @@ SAP CPI
 
 <br>
 
-### :two:  HTTPS Sender
+### :four:  HTTPS Sender
 
 <br>
 
@@ -158,7 +158,7 @@ O fluxo é iniciado através de um endpoint HTTPS, permitindo que aplicações e
 ```
 <br>
 
-### :three: Content Modifier – Definição  Prepare Email Payload
+### :five: Content Modifier – Definição  Prepare Email Payload
 
 Nesta etapa são definidas as configurações que vamos usar para o Pauload.
 
@@ -188,7 +188,7 @@ create   -   Date_Now     -    Expression   -    ${date:now:yyyy-MM-dd HH:mm:ss}
 ```
 <br>
 
-### :four: End – Receiver
+### :six: End – Receiver
 
 Nesta etapa, vamos utilizar o adapter de Email para que possamos realizar as conexões e configurações no adapter, para recebermos o e-mail da forma que queremos.
 
