@@ -221,8 +221,9 @@ Authentication: Plain User/Password
 Vamos marcar Body Mime Type: Text/HTML
 ![Fluxo](imagens/Screenshot_20.png)
 
+Subject:
 ```
-Subject: CPI Monitoramento - ${header.Iflow_Name} - ${property.Date_Now}
+CPI Monitoramento - ${header.Iflow_Name} - ${property.Date_Now}
 ```
 <br>
 
