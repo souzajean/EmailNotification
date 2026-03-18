@@ -162,6 +162,11 @@ O fluxo é iniciado através de um endpoint HTTPS, permitindo que aplicações e
 Nesta etapa são definidas as configurações que vamos usar para o Pauload.
 
 
+### Adicionando o Content Modifier
+![Fluxo](imagens/Screenshot_14.png)
+
+<br>
+
 ### Renomeando o Content Modifier
 ![Fluxo](imagens/Screenshot_14.png)
 Renomeamos o Content Modifier 
@@ -170,8 +175,8 @@ Prepare Email Payload
 ```
 <br>
 
-### Donfigurando o Content Modifier - Property
-![Fluxo](imagens/Screenshot_15.png)
+### Configurando o Content Modifier - Property
+![Fluxo](imagens/Screenshot_16.png)
 
 Em Property adicionamos
 ```
@@ -188,10 +193,7 @@ Nesta etapa, vamos utilizar o adapter de Email para que possamos realizar as con
 
 O retorno é recebido no formato HTML.
 
-### Conectamos o Email GMail
-![Fluxo](imagens/Screenshot_16.png)
 
-<br>
 
 
 
