@@ -334,7 +334,7 @@ Mail Body:
 
 ### :eight: E-MAIL GMAIL
 ### Email recebido do CPI
-Email recebido do CPI
+A notificação enviada contém:
 ![Fluxo](imagens/Screenshot_22.png)
 
 
