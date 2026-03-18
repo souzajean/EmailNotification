@@ -176,14 +176,23 @@ Prepare Email Payload
 ```
 <br>
 
-### Configurando o Content Modifier - Property
+### Configurando o Content Modifier - Header
 ![Fluxo](imagens/Screenshot_16.png)
 
 Em Property adicionamos
 ```
 Exchange Property
-create   -   Iflow_Name   -    Expression   -    ${property.Iflow_Name}             - java.lang.String
-create   -   CPI_Tenant   -    Expression   -    ${property.CamelHttpHost}          - java.lang.String
+create   -   CPI_Tenant   -    Expression   -    ${header.CamelHttpUrl}          - java.lang.String
+```
+<br>
+
+### Configurando o Content Modifier - Property
+![Fluxo](imagens/Screenshot_17.png)
+
+Em Property adicionamos
+```
+Exchange Property
+create   -   Iflow_Name   -    Constant     -    NotificationEmail
 create   -   Date_Now     -    Expression   -    ${date:now:yyyy-MM-dd HH:mm:ss}    - java.lang.String
 ```
 <br>
@@ -195,12 +204,12 @@ Nesta etapa, vamos utilizar o adapter de Email para que possamos realizar as con
 O retorno é recebido no formato HTML.
 
 ### Adicionamos o Adapter Mail
-![Fluxo](imagens/Screenshot_17.png)
+![Fluxo](imagens/Screenshot_18.png)
 
 <br>
 
 ### Configuração do Mail - Connection
-![Fluxo](imagens/Screenshot_18.png)
+![Fluxo](imagens/Screenshot_19.png)
 ```
 Address: smtp.gmail.com
 Protection: SMTPS
@@ -210,7 +219,7 @@ Authentication: Plain User/Password
 
 ### Configuração do Mail - Processing
 Vamos marcar Body Mime Type: Text/HTML
-![Fluxo](imagens/Screenshot_19.png)
+![Fluxo](imagens/Screenshot_20.png)
 
 ```
 Subject: CPI Monitoramento - ${property.Iflow_Name} - ${property.Date_Now}
