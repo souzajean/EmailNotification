@@ -168,8 +168,8 @@ Nesta etapa são definidas as configurações que vamos usar para o Pauload.
 <br>
 
 ### Renomeando o Content Modifier
-![Fluxo](imagens/Screenshot_14.png)
 Renomeamos o Content Modifier 
+![Fluxo](imagens/Screenshot_14.png)
 ```
 Prepare Email Payload
 ```
@@ -182,7 +182,7 @@ Em Property adicionamos
 ```
 Exchange Property
 create   -   Iflow_Name   -    Expression   -    ${property.Iflow_Name}             - java.lang.String
-create   -   CPI_Tenant   -    Expression   -    ${header.CamelHttpHost}            - java.lang.String
+create   -   CPI_Tenant   -    Expression   -    ${property.CamelHttpHost}          - java.lang.String
 create   -   Date_Now     -    Expression   -    ${date:now:yyyy-MM-dd HH:mm:ss}    - java.lang.String
 ```
 <br>
@@ -193,59 +193,164 @@ Nesta etapa, vamos utilizar o adapter de Email para que possamos realizar as con
 
 O retorno é recebido no formato HTML.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-### Adicionamos o Adapter HTTP
+### Adicionamos o Adapter Mail
 ![Fluxo](imagens/Screenshot_17.png)
 
 <br>
 
-### Configuração do Request Reply
+### Configuração do Mail - Connection
 ![Fluxo](imagens/Screenshot_18.png)
 ```
-Address: https://api.open-meteo.com/v1/forecast?latitude=${property.latitude}&longitude=${property.longitude}&current_weather=true
-Proxy Type: Internet
-Method: GET
-Authentication: None
+Address: smtp.gmail.com
+Protection: SMTPS
+Authentication: Plain User/Password
+```
+<br>
+
+### Configuração do Mail - Processing
+Vamos marcar Body Mime Type: Text/HTML
+![Fluxo](imagens/Screenshot_19.png)
+
+```
+Subject: CPI Monitoramento - ${property.Iflow_Name} - ${property.Date_Now}
+```
+<br>
+
+<br>
+
+Mail Body:
+```
+<!DOCTYPE html>
+<html>
+<body style="margin:0; padding:0; background-color:#f5f6f7; font-family: Arial, sans-serif;">
+
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f5f6f7;">
+  <tr>
+    <td align="center">
+
+      <!-- CONTAINER -->
+      <table width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff; border:1px solid #d9d9d9;">
+
+        <!-- HEADER FIORI -->
+        <tr>
+          <td style="background-color:#0a6ed1; color:#ffffff; padding:20px; font-size:20px; font-weight:bold;">
+            SAP CPI - Monitoramento
+          </td>
+        </tr>
+
+        <!-- STATUS -->
+        <tr>
+          <td style="padding:20px;">
+            <span style="background-color:#bb0000; color:#ffffff; padding:6px 12px; font-size:12px; border-radius:4px;">
+              ERRO
+            </span>
+          </td>
+        </tr>
+
+        <!-- CONTEÚDO -->
+        <tr>
+          <td style="padding:0 20px 20px 20px; color:#32363a;">
+
+            <h2 style="margin:0 0 10px 0; font-size:20px; color:#32363a;">
+              Falha no iFlow
+            </h2>
+
+            <p style="font-size:14px; line-height:20px;">
+              Olá,<br><br>
+              Ocorreu um erro no fluxo de integração do SAP CPI. Veja os detalhes abaixo:
+            </p>
+
+            <!-- CARD ESTILO FIORI -->
+            <table width="100%" cellpadding="10" cellspacing="0" style="border:1px solid #e5e5e5; border-radius:4px;">
+              
+              <tr style="background-color:#fafafa;">
+                <td width="40%"><b>CPI Tenant</b></td>
+                <td>${property.CPI_Tenant}</td>
+              </tr>
+
+              <tr>
+                <td><b>Name Iflow</b></td>
+                <td>${property.Iflow_Name}</td>
+              </tr>
+
+              <tr style="background-color:#fafafa;">
+                <td><b>Date Time</b></td>
+                <td>${property.Date_Now}</td>
+              </tr>
+
+              <tr>
+  		<td><b>Erro</b></td>
+  		<td style="color:#bb0000;">
+  		Falha detectada durante a execução do fluxo de integração.<br/>
+  		Acesse o SAP CPI em <b>Monitoramento → Message Monitoring</b> para análise detalhada e reprocessamento.
+		</td>
+	      </tr>
+
+            </table>
+
+            <p style="margin-top:20px; font-size:14px;">
+              Verifique o monitoramento do CPI ou acione o time responsável.
+            </p>
+
+          </td>
+        </tr>
+
+        <!-- FOOTER -->
+        <tr>
+          <td style="background-color:#f5f6f7; padding:15px; font-size:12px; color:#6a6d70; text-align:center;">
+            SAP Integration Suite © Empresa
+          </td>
+        </tr>
+
+      </table>
+
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
 ```
 
 <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
 
 ### :five: JSON → XML Converter
 
