@@ -124,7 +124,7 @@ SAP CPI
 ```
 <br>
 
-### Armarzenar a senha
+### Armazenar a senha
 ![Fluxo](imagens/Screenshot_9.png)
 
 <br>
